@@ -7,8 +7,8 @@ public class test {
 	public static void main(String[] args){
 
 		// 苹果 草莓 芒果 单价
-		int apple =8;int strawberry = 10;int mango = 10;
-		int appleWeight = 10, strawberryWeight = 5; int mangoWeight = 8;
+		Double apple =8;Double strawberry = 10;Double mango = 10;
+		Double appleWeight = 10, strawberryWeight = 5; Double mangoWeight = 8;
 		System.out.println("-------------1题：两种水果 A购买的总价");
 		totalPriceA(apple, strawberry, appleWeight, strawberryWeight);
 		System.out.println("-------------2题：三种水果 B购买的总价");
@@ -19,13 +19,13 @@ public class test {
 		totalPriceD(apple, strawberry, mango, appleWeight, strawberryWeight, mangoWeight);
 	}
 
-	private static void totalPriceD(int apple, int strawberry, int mango, int appleWeight, int strawberryWeight, int mangoWeight) {
+	private static void totalPriceD(Double apple, Double strawberry, Double mango, Double appleWeight, Double strawberryWeight, Double mangoWeight) {
 		DecimalFormat df = new DecimalFormat("#.##");
 		// 判断 C是否购买了 苹果
 		if (appleWeight > 0){
 			// 苹果打8折
 			Double b = apple * 0.8;
-			int weight = appleWeight+strawberryWeight+mango;
+			Double weight = appleWeight+strawberryWeight+mango;
 			if (weight == 0){
 				System.out.println("D 没有购买商品！");
 			}
@@ -39,7 +39,7 @@ public class test {
 				System.out.println("D 所购商品的总价是:"+df.format(totalPrice));
 			}
 		}else {
-			int weight = strawberryWeight+mangoWeight;
+			Double weight = strawberryWeight+mangoWeight;
 			if (weight == 0){
 				System.out.println("D 没有购买商品！");
 			}else {
@@ -57,12 +57,12 @@ public class test {
 		}
 	}
 
-	private static void totalPriceC(int apple, int strawberry, int mango, int appleWeight, int strawberryWeight, int mangoWeight) {
+	private static void totalPriceC(Double apple, Double strawberry, Double mango, Double appleWeight, Double strawberryWeight, Double mangoWeight) {
 		// 判断 C是否购买了 苹果
 		if (appleWeight > 0){
 			// 苹果打8折
 			Double b = apple * 0.8;
-			int weight = appleWeight+strawberryWeight+mango;
+			Double weight = appleWeight+strawberryWeight+mango;
 			if (weight == 0){
 				System.out.println("C 没有购买商品！");
 			}
@@ -70,7 +70,7 @@ public class test {
 			DecimalFormat df = new DecimalFormat("#.##");
 			System.out.println("C 所购商品的总价是:"+df.format(totalPrice));
 		}else {
-			int weight = strawberryWeight+mangoWeight;
+			Double weight = strawberryWeight+mangoWeight;
 			if (weight == 0){
 				System.out.println("C 没有购买商品！");
 			}else {
@@ -81,8 +81,8 @@ public class test {
 
 	}
 
-	private static void totalPriceA(int apple, int strawberry, int appleWeight, int strawberryWeight) {
-		int weight = appleWeight+strawberryWeight;
+	private static void totalPriceA(Double apple, Double strawberry, Double appleWeight, Double strawberryWeight) {
+		Double weight = appleWeight+strawberryWeight;
 		if (weight == 0){
 			System.out.println("A 没有购买商品！");
 		}else {
@@ -91,8 +91,8 @@ public class test {
 		}
 
 	}
-	private static void totalPriceB(int apple, int strawberry,int mango, int appleWeight, int strawberryWeight,int mangoWeight) {
-		int weight = appleWeight+strawberryWeight+mangoWeight;
+	private static void totalPriceB(Double apple, Double strawberry,Double mango, Double appleWeight, Double strawberryWeight,Double mangoWeight) {
+		Double weight = appleWeight+strawberryWeight+mangoWeight;
 		if (weight == 0){
 			System.out.println("B 没有购买商品！");
 		}else {
